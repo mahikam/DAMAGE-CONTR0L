@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>DAMAGE CONTR0L</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+    
+        <link rel="stylesheet" type="text/css" href="style.css">
+      </head>
+      <body>
+          <div class="container">
+              <center>
+                  <h1 id="header">DAMAGE CONTR0L</h1>
+                  <hr>
+                  <br>
+                  <p style="color: #bf665c;">WARNING: Do NOT try to fix the damages by yourself. Call a professional for help.</p>
+                  <p id="article_sentence">Click <b><a href="info.html" id="article">here</a></b> to know the types of damages this model is trained on!</p>
+                  <br><br>
+              </center>
+          </div>
+          <center>
+          <span>
+            <div id="box1">
+              <center>
+                <label class="labels">Take a picture below: </label>
+                <div id="camera"></div>
+                <br><br>
+                <button class="btn btn-default buttons" onclick="take_snapshot()">Take Image</button>
+                <br>
+              </center>
+            </div>
+          </span>
+          <br><br>
+          <span>
+            <div id="box2">
+              <center>
+                <label class="labels">Result: </label>
+                <div id="result"></div>
+                <br><br>
+                <button class="btn btn-default buttons" onclick="check()">Predict The Damage</button>
+                <br>
+              </center>
+            </div>
+          </span>
+        </center>
+          <br><br>
+          <center>
+          <div id="output">
+                <h4>Result - <span id="result_id"></span></h4>
+                <hr>
+                <h4>Accuracy - <span id="accuracy_id"></span></h4>
+          </div>
+          <br>
+          <p>*The prediction may not be accurate*</p>
+          <br><br>
+          <div class="footer">Created by Mahika Mamidipalli</div>
+        </center>
+          <br>
+          <script src="main.js"></script>
+      </body>
+</html>
